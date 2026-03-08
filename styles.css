@@ -1,8 +1,10 @@
 /* =========================
    Base Reset
 ========================= */
-
 *{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
    margin:0;
    padding:0;
    box-sizing:border-box;
@@ -11,7 +13,6 @@
 /* =========================
    Color Variables
 ========================= */
-
 :root{
    --black:#111111;
    --dark-gray:#333333;
@@ -300,6 +301,7 @@ img{
 
 .parabola .role-item h5{
    color:var(--parabola-teal);
+   color:var(--parabola-teal);
 }
 
 .origami-section{
@@ -404,6 +406,7 @@ img{
 
 html{
    scroll-behavior:smooth;
+   scroll-behavior:smooth;
 }
 
 /* =========================
@@ -411,6 +414,12 @@ html{
 ========================= */
 
 footer{
+   margin-top:60px;
+   padding:30px 0;
+   text-align:center;
+   font-size:.9rem;
+   color:var(--dark-gray);
+   border-top:1px solid var(--light-gray);
    margin-top:60px;
    padding:30px 0;
    text-align:center;
@@ -427,9 +436,15 @@ footer{
 .find-me{
    padding:80px 10%;
    text-align:center;
+   padding:80px 10%;
+   text-align:center;
 }
 
 .platform-grid{
+   display:grid;
+   grid-template-columns:repeat(3, 1fr);
+   gap:30px;
+   margin-top:40px;
    display:grid;
    grid-template-columns:repeat(3, 1fr);
    gap:30px;
@@ -444,13 +459,23 @@ footer{
    text-align:left;
    transition:all .3s ease;
    backdrop-filter:blur(6px);
+   position:relative;
+   background:rgba(255,255,255,.05);
+   border-radius:14px;
+   padding:35px;
+   text-align:left;
+   transition:all .3s ease;
+   backdrop-filter:blur(6px);
 }
 
 .platform-card:hover{
    transform:translateY(-8px);
+   transform:translateY(-8px);
 }
 
 .platform-logo{
+   height:80px;
+   margin-bottom:16px;
    height:80px;
    margin-bottom:16px;
 }
@@ -458,9 +483,20 @@ footer{
 .platform-card h3{
    color:black;
    margin-bottom:10px;
+   color:black;
+   margin-bottom:10px;
 }
 
 .platform-card{
+   display:block;
+   text-decoration:none;
+   color:inherit;
+   position:relative;
+   background:rgba(255,255,255,.05);
+   border-radius:14px;
+   padding:35px;
+   transition:all .3s ease;
+   cursor:pointer;
    display:block;
    text-decoration:none;
    color:inherit;
@@ -479,18 +515,28 @@ footer{
    margin-top:18px;
    font-size:.9rem;
    font-weight:500;
+   opacity:0;
+   transform:translateY(10px);
+   transition:all .25s ease;
+   margin-top:18px;
+   font-size:.9rem;
+   font-weight:500;
 }
 
 .platform-card:hover .platform-btn{
+   opacity:1;
+   transform:translateY(0);
    opacity:1;
    transform:translateY(0);
 }
 
 .linkedin:hover{
    box-shadow:0 10px 35px rgba(10,102,194,.35);
+   box-shadow:0 10px 35px rgba(10,102,194,.35);
 }
 
 .github:hover{
+   box-shadow:0 10px 35px rgb(0, 0, 0);
    box-shadow:0 10px 35px rgb(0, 0, 0);
 }
 
