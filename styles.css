@@ -133,15 +133,19 @@ color:var(--dark-gray);
 ========================= */
 
 a{
-
-color:#8E6250;
-
+   color:#8E6250;
 }
 
 a:hover{
+   color:#462521;
+}
 
-color:#462521;
-
+/* =========================
+   Images
+========================= */
+img{
+   max-width:100%;
+   height:auto;
 }
 
 /* =========================
@@ -149,24 +153,18 @@ color:#462521;
 ========================= */
 
 .home-section{
-
 display:flex;
 align-items:flex-start;
 gap:40px;
-
 }
 
 .profile-pic{
-
 width:320px;
 border-radius:8px;
-
 }
 
 .about-text{
-
 flex:1;
-
 }
 
 /* =========================
@@ -174,24 +172,19 @@ flex:1;
 ========================= */
 
 .timeline-section{
-
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 padding:80px;
-
 opacity:0;
 transform:translateY(40px);
 transition:.6s;
-
 }
 
 .timeline-section.visible{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
 /* =========================
@@ -199,18 +192,14 @@ transform:translateY(0);
 ========================= */
 
 .content{
-
 max-width:700px;
 color:white;
-
 }
 
 .year{
-
 opacity:.8;
 margin-bottom:20px;
 color:white;
-
 }
 
 /* =========================
@@ -271,43 +260,33 @@ color:white;
 ========================= */
 
 .role-section{
-
 margin-top:40px;
-
 }
 
 .role-grid{
-
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:20px;
 margin-top:20px;
-
 }
 
 .role-item{
-
 background:rgba(255,255,255,.12);
 padding:18px;
 border-radius:8px;
-
 }
 
 .role-item h5{
-
 margin-bottom:8px;
 font-size:1rem;
 font-weight:600;
 color:white;
-
 }
 
 .role-item p{
-
 margin:0;
 font-size:.95rem;
 color:rgba(255,255,255,0.85);
-
 }
 
 .role-section{
@@ -320,17 +299,14 @@ width:100%;
 ========================= */
 
 .kenway{
-
 background:linear-gradient(135deg,
 var(--kenway-dark-maroon),
 var(--kenway-maroon));
-
 }
 
 .kenway .role-section h3{
 color:var(--kenway-salmon);
 }
-
 
 .parabola{
 background:var(--parabola-black);
@@ -358,9 +334,7 @@ color:#a9c8ff;
 ========================= */
 
 html{
-
 scroll-behavior:smooth;
-
 }
 
 /* =========================
@@ -368,14 +342,12 @@ scroll-behavior:smooth;
 ========================= */
 
 footer{
-
 margin-top:60px;
 padding:30px 0;
 text-align:center;
 font-size:.9rem;
 color:var(--dark-gray);
 border-top:1px solid var(--light-gray);
-
 }
 
 
@@ -384,161 +356,117 @@ border-top:1px solid var(--light-gray);
 ========================= */
 
 .find-me{
-
 padding:80px 10%;
 text-align:center;
-
 }
 
 .platform-grid{
-
 display:grid;
 grid-template-columns:repeat(3, 1fr);
 gap:30px;
 margin-top:40px;
-
 }
 
 .platform-card{
-
 position:relative;
 background:rgba(255,255,255,.05);
 border-radius:14px;
 padding:35px;
 text-align:left;
-
 transition:all .3s ease;
-
 backdrop-filter:blur(6px);
-
 }
 
 .platform-card:hover{
-
 transform:translateY(-8px);
-
 }
 
 .platform-logo{
-
 height:80px;
 margin-bottom:16px;
-
 }
 
 .platform-card h3{
-
 color:black;
 margin-bottom:10px;
-
 }
 
 .platform-card{
-
 display:block;
 text-decoration:none;
 color:inherit;
-
 position:relative;
 background:rgba(255,255,255,.05);
 border-radius:14px;
 padding:35px;
-
 transition:all .3s ease;
-
 cursor:pointer;
-
 }
 
 .platform-btn{
-
 opacity:0;
 transform:translateY(10px);
 transition:all .25s ease;
-
 margin-top:18px;
 font-size:.9rem;
 font-weight:500;
-
 }
 
 .platform-card:hover .platform-btn{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
 .linkedin:hover{
-
 box-shadow:0 10px 35px rgba(10,102,194,.35);
-
 }
 
 .github:hover{
-
 box-shadow:0 10px 35px rgb(0, 0, 0);
-
 }
 
 .substack:hover{
-
 box-shadow:0 10px 35px rgba(255,103,0,.35);
-
 }
 
 
 .contact-section{
-
 margin-top:40px;
 text-align:center;
-
 }
 
 .contact-card{
 display:flex;
 align-items:center;
 gap:25px;
-
 background:rgba(255,255,255,.05);
 border-radius:14px;
-
 padding:30px 7px 30px 45px;
 margin:0 auto 0 auto;
-
 max-width:500px;
-
 text-decoration:none;
 color:inherit;
-
 transition:all .25s ease;
 }
 
 .contact-card:hover{
-
 transform:translateY(-6px);
 box-shadow:0 10px 35px rgba(100, 40, 126, 0.662);
-
 }
 
 .contact-logo{
-
 height:40px;
 width:auto;
-
 }
 
 .contact-text{
 text-align:left;
 display:flex;
 flex-direction:column;
-
 }
 
 .contact-text h3{
-
 margin-bottom:6px;
-
 }
 
 .contact-card .platform-btn{
