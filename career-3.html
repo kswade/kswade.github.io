@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Professional Journey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Me</a> |
+      <a href="resume.html">Career Journey</a> |
+      <a href="portfolio.html">Portfolio</a> |
+      <a href="socials.html">Where To Find Me</a> 
+    </nav>
+  </header>
+
+  <main class="container">
+  <div class="container">
+
+  <h1>My Professional Journey</h1>
+
+  <p class="intro">
+  I work at the intersection of SaaS implementation, automation strategy, and
+  data-driven decision making. My career has focused on helping organizations
+  adopt modern platforms, automate complex workflows, and unlock measurable
+  business value from their data.
+  </p>
+
+
+  <!-- PARABOLA -->
+
+  <div class="experience-card">
+
+  <div class="experience-header">
+
+  <img src="images/parabola-logo.png" class="company-logo">
+
+  <div>
+  <h2>Parabola</h2>
+  <h3>Technical Launch Manager • 2022 – Present</h3>
+  </div>
+
+  </div>
+
+  <p class="company-description">
+  Parabola is a no-code automation platform that allows teams to build powerful
+  data workflows without engineering resources.
+  </p>
+
+  <h4>Key Impact</h4>
+
+  <ul>
+  <li>Launch 6–8 enterprise customers simultaneously, enabling teams to automate complex data workflows within a 90-day onboarding window.</li>
+
+  <li>Reduced customer <strong>Time to Value from 3 months to 2 weeks</strong> by redesigning the launch process and prioritizing high-impact automation use cases.</li>
+
+  <li>Lead technical discovery sessions quantifying automation ROI, with individual use cases generating <strong>$500K–$1M in measurable value</strong>.</li>
+
+  <li>Partner with Product and Engineering as a customer advocate to shape product roadmap and test new features.</li>
+  </ul>
+
+  <button class="expand-btn">View Details</button>
+
+  <div class="details">
+
+  <ul>
+
+  <li>Collaborate with Account Executives during sales cycles to demo solutions, build proofs-of-concept, and identify expansion opportunities.</li>
+
+  <li>Drive internal operational efficiency by building company automations including customer health dashboards, use case trackers, and product usage reporting.</li>
+
+  <li>Average customer expansion of <strong>3x contract value</strong> through strategic automation opportunities.</li>
+
+  </ul>
+
+  </div>
+
+  </div>
+
+
+
+  <!-- ORIGAMI RISK -->
+
+  <div class="experience-card">
+
+  <div class="experience-header">
+
+  <img src="assets/images/origami-logo.png" class="company-logo">
+
+  <div>
+  <h2>Origami Risk</h2>
+  <h3>Technical Consultant • 2021 – 2022</h3>
+  </div>
+
+  </div>
+
+  <p class="company-description">
+  Origami Risk provides enterprise SaaS solutions for risk management,
+  insurance, and compliance programs.
+  </p>
+
+  <h4>Key Impact</h4>
+
+  <ul>
+  <li>Implemented complex SaaS solutions for enterprise clients, configuring systems to automate and streamline operational workflows.</li>
+
+  <li>Designed innovative modules including a healthcare provider and appointment tracking system.</li>
+
+  <li>Identified expanded solution opportunities generating <strong>$60K in additional client revenue</strong>.</li>
+
+  <li>Mentored junior consultants and led client working sessions translating business requirements into technical configuration.</li>
+  </ul>
+
+  <button class="expand-btn">View Details</button>
+
+  <div class="details">
+
+  <ul>
+
+  <li>Delivered internal training sessions on advanced reporting functionality used across the organization.</li>
+
+  <li>Authored a 20-page internal knowledge base guide to standardize reporting practices.</li>
+
+  </ul>
+
+  </div>
+
+  </div>
+
+
+
+  <!-- BUSINESS SYSTEM ANALYST -->
+
+  <div class="experience-card">
+
+  <div class="experience-header">
+
+  <img src="assets/images/origami-logo.png" class="company-logo">
+
+  <div>
+  <h2>Origami Risk</h2>
+  <h3>Business Systems Analyst • 2019 – 2021</h3>
+  </div>
+
+  </div>
+
+  <h4>Key Impact</h4>
+
+  <ul>
+
+  <li>Configured SaaS implementations supporting an average of <strong>1,300 end users per client</strong>.</li>
+
+  <li>Developed custom reporting solutions, with the most impactful saving a client <strong>$3M</strong>.</li>
+
+  <li>Built a custom claims protocol module and two major data conversions within a compressed five-month implementation timeline.</li>
+
+  <li>Integrated systems with third-party vendors including insurers, financial institutions, and federal agencies.</li>
+
+  </ul>
+
+  </div>
+
+
+  </div>
+
+
+
+  <script>
+
+  const buttons = document.querySelectorAll(".expand-btn");
+
+  buttons.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+  const details = btn.nextElementSibling;
+
+  if(details.style.display === "block"){
+  details.style.display = "none";
+  btn.textContent = "View Details";
+  }
+
+  else{
+  details.style.display = "block";
+  btn.textContent = "Hide Details";
+  }
+
+  });
+
+  });
+
+  </script>
+  </main>
+</body>
+</html>
