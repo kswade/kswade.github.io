@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>About Me</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/chicago_favicon.png">
 </head>
 <body>
   <header>
@@ -20,14 +21,11 @@
   <section class="about-main">
       <img src="images/about_me.jpg" class="about-main-image" alt="About me">
       <div class="about-main-text">
-          <h1>My Story</h1>
           <p class="about-intro">
-          Hi — I'm Katie. And if you know me, you also know my service dog, Pauline.
+          Nice to meet you! I'm Katie. And if you know me, you also know my service dog, Pauline.
           </p>
           <p>
-          I enjoy working at the intersection of technology, problem-solving, and collaboration.
-          Over the past few years I’ve worked with startups and software teams helping transform
-          complex business processes into practical automated solutions.
+          This is my story.
           </p>
       </div>
   </section>
@@ -41,8 +39,9 @@
         <h3>Where I'm Based</h3>
         <div class="divider"></div>
         <p>
-        I’m based in Chicago and have always loved the city for its energy and character. Between the food scene, the lakefront, and the way the seasons completely transform the city throughout the year, there’s always something happening.
-          More than anything though, it’s the people that make Chicago special.
+          Chicago is not just where I’m based but part of who I am.
+          The seasons, the food, the lake and the Midwestern charm give me life.
+          I even share a birthday with the city!
         </p>
     </div>
   </section>
@@ -56,8 +55,11 @@
         <h3>What I Enjoy Working On</h3>
         <div class="divider"></div>
         <p>
-        I enjoy solving complex problems and translating them into
-        automated systems that simplify business processes.
+          My whole career has been centered around the abstract side of understanding complex business problems that need solving, 
+          but anchoring those solutions in coding and automation. I love nothing more than sinking my teeth into
+          a multi-faceted problem and working with a team to design and build a solution that makes a real impact. 
+          I also really enjoy the client-facing side of consulting — collaborating with stakeholders, understanding their needs, 
+          and translating that into technical solutions is something I find really rewarding.
         </p>
     </div>
   </section>
@@ -71,8 +73,10 @@
         <h3>Why I Love Coding & Tech</h3>
         <div class="divider"></div>
         <p>
-        What I enjoy most about coding is the ability to take an abstract idea and turn it into something real.
-        The tech industry is constantly evolving, which means there’s always something new to learn. That mix of creativity, logic, and continuous learning is what keeps the work interesting.
+        What I enjoy most about coding is the ability to take an abstract idea and turn it into something real with something black and white.
+        It's the perfect mix of art and science.
+        The tech industry is constantly evolving, which means there’s always something new to learn. 
+        That mix of creativity, logic, and continuous learning is what keeps the work interesting.
         </p>
     </div>
   </section>
@@ -86,9 +90,11 @@
         <h3>When I'm Not Working</h3>
         <div class="divider"></div>
         <p>
-        When I’m not working, I enjoy cooking and trying new recipes, usually for friends and family.
-        I also spend a lot of time reading — especially books about technology, business, and ideas that shape how industries evolve.
-        I also love traveling.
+        When I’m not working, you can typically find me cooking new recipes for friends or reading a book
+        on my Kindle (you can find my favorites below!)
+        If I could, I'd spend my whole life traveling - there is nothing better than exploring a new city,
+        trying new foods, absorbing yourself in a culture that's both vastly different than yours, yet at the same
+        time so universally human.
         </p>
     </div>
   </section>
@@ -102,11 +108,192 @@
         <h3>What I Care About Most</h3>
         <div class="divider"></div>
         <p>
-        At the end of the day, the people in my life matter most. My family and close friends have always been a big source of support and perspective.
-        No matter how busy things get, I make time for the relationships that matter most.
+        At the end of the day, the people in my life matter most. 
+        My family and close friends have always been the most important part of my life.
+        No matter how busy things get, I always make time for the relationships that matter most.
         </p>
     </div>
   </section>
+
+  <section class="t1d-section">
+    <h1>What I Support</h1>
+    <h1>Supporting Type 1 Diabetes Research</h1>
+    <p class="t1d-intro">
+      Type 1 diabetes research is a cause close to my heart. I try to stay
+      involved by supporting organizations working toward better treatments
+      and ultimately a cure.
+    </p>
+    <div class="t1d-actions">
+      <a href="https://www.breakthrought1d.org/ways-to-give/" target="_blank" style="text-decoration: none;">
+        <div class="t1d-card">
+          <h3>Donate</h3>
+          <p>Support organizations funding research and advocacy.</p>
+        </div>
+      </a>
+      <div class="t1d-card" onclick="toggleLearn()">
+        <h3>Learn</h3>
+        <p>Understanding Type 1 diabetes helps build awareness.</p>
+      </div>
+      <div class="t1d-card">
+        <h3>Get Involved</h3>
+        <p>Participate in walks, events, and community programs.</p>
+      </div>
+    </div>
+    <section class="diabetes-learn learn-hidden" id="learn-section">
+      <h2>How Type 1 and Type 2 Diabetes Differ</h2>
+      <div class="diabetes-grid">
+        <div class="t1">
+          <p>Pancreas does not make insulin</p>
+          <img src="icons/effect-t1.png" style="width:50px; height:50px;">
+        </div>
+        <div class="label">Effect</div>
+        <div class="t2">
+          <img src="icons/effect-t2.png">
+          <p>Body doesn't respond to insulin</p>
+        </div>
+
+        <div class="t1">
+          <p>Tied to autoimmune, genetic, and environmental factors</p>
+          <img src="icons/cause-t1.png" style="width:50px; height:50px;">
+        </div>
+        <div class="label">Cause</div>
+        <div class="t2">
+          <img src="icons/cause-t2.png">
+          <p>Tied to aging, genetic susceptibility, sedentary lifestyle, and obesity</p>
+        </div>
+
+        <div class="t1">
+          <p>Often begins in childhood or early adulthood</p>
+          <img src="icons/age-t1.png">
+        </div>
+        <div class="label">Age of Onset</div>
+        <div class="t2">
+          <img src="icons/age-t2.png">
+          <p>Most commonly diagnosed in people aged 45-64 but can affect people of all ages</p>
+        </div>
+
+        <div class="t1">
+          <p>Lifelong blood glucose monitoring and insulin therapy through injections or insulin pump</p>
+          <img src="icons/treatment-t1.png">
+        </div>
+        <div class="label">Treatment</div>
+        <div class="t2">
+          <img src="icons/treatment-t2-2.png">
+          <p>Managing diet and exercise, medications, monitoring blood glucose, possible insulin therapy in advanced cases</p>
+        </div>
+
+        <div class="t1">
+          <p>~5% of diabetic cases</p>
+          <img src="icons/prevalence-t1.png">
+        </div>
+        <div class="label">Prevalence</div>
+        <div class="t2">
+          <img src="icons/prevalence-t2.png">
+          <p>~90-95% of diabetes cases</p>
+        </div>
+
+        <div class="t1">
+          <p>Currently cannot be prevented or cured</p>
+          <img src="icons/preventions-t1.png">
+        </div>
+        <div class="label">Prevention/Cure</div>
+        <div class="t2">
+          <img src="icons/preventions-t2.png">
+          <p>Possible to prevent or manage it by diet and/or exercise</p>
+        </div>
+
+        </div>
+        <i><a href="https://www.breakthrought1d.org/news-and-updates/type-1-diabetes-vs-type-2-diabetes/">Source: Breakthrough T1D</a></i>
+    </section>
+  </section>
+
+  <section class="reading-section">
+    <h1>What I've Read & Loved as of Late</h1>
+
+    <div class="book-marquee">
+      <div class="book-track">
+
+        <!-- set 1 -->
+        <img src="images/books/3bodyproblem.jpg" alt="3 Body Problem">
+        <img src="images/books/112263.webp" alt="11/22/63">
+        <img src="images/books/allthelight.jpg" alt="All the Light We Cannot See">
+        <img src="images/books/andthentherewerenone.jpg" alt="And Then There Were None">
+        <img src="images/books/bookthief.jpg" alt="The Book Thief">
+        <img src="images/books/chipwar.webp" alt="Chip War">
+        <img src="images/books/cityofthieves.webp" alt="City of Thieves">
+        <img src="images/books/demoncopperhead.jpg" alt="Demon Copperhead">
+        <img src="images/books/dragontattoo.webp" alt="The Girl with the Dragon Tattoo">
+        <img src="images/books/gentleman.jpg" alt="A Gentleman in Moscow">
+        <img src="images/books/justmercy.jpg" alt="Just Mercy">
+        <img src="images/books/lotr.webp" alt="The Fellowship of the Ring">
+        <img src="images/books/pillars.jpg" alt="Pillars of the Earth">
+        <img src="images/books/projecthailmary.webp" alt="Project Hail Mary">
+        <img src="images/books/redrising.jpg" alt="Red Rising">
+        <img src="images/books/shadowofthewind.jpg" alt="The Shadow of the Wind">
+        <img src="images/books/songofachilles.webp" alt="The Song of Achilles">
+        <img src="images/books/thousandsplendidsuns.jpg" alt="A Thousand Splendid Suns">
+        <img src="images/books/willofthemany.webp" alt="The Will of the Many">
+
+        <!-- duplicate set for seamless loop -->
+        <img src="images/books/3bodyproblem.jpg" alt="3 Body Problem">
+        <img src="images/books/112263.webp" alt="11/22/63">
+        <img src="images/books/allthelight.jpg" alt="All the Light We Cannot See">
+        <img src="images/books/andthentherewerenone.jpg" alt="And Then There Were None">
+        <img src="images/books/bookthief.jpg" alt="The Book Thief">
+        <img src="images/books/chipwar.webp" alt="Chip War">
+        <img src="images/books/cityofthieves.webp" alt="City of Thieves">
+        <img src="images/books/demoncopperhead.jpg" alt="Demon Copperhead">
+        <img src="images/books/dragontattoo.webp" alt="The Girl with the Dragon Tattoo">
+        <img src="images/books/gentleman.jpg" alt="A Gentleman in Moscow">
+        <img src="images/books/justmercy.jpg" alt="Just Mercy">
+        <img src="images/books/lotr.webp" alt="The Fellowship of the Ring">
+        <img src="images/books/pillars.jpg" alt="Pillars of the Earth">
+        <img src="images/books/projecthailmary.webp" alt="Project Hail Mary">
+        <img src="images/books/redrising.jpg" alt="Red Rising">
+        <img src="images/books/shadowofthewind.jpg" alt="The Shadow of the Wind">
+        <img src="images/books/songofachilles.webp" alt="The Song of Achilles">
+        <img src="images/books/thousandsplendidsuns.jpg" alt="A Thousand Splendid Suns">
+        <img src="images/books/willofthemany.webp" alt="The Will of the Many">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cooking-section">
+    <h1>What I've Cooked and Loved as of Late</h1>
+    <div class="cooking-videos">
+      <video autoplay muted loop playsinline>
+        <source src="videos/alison2.mov" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline>
+        <source src="videos/food.MP4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline>
+        <source src="videos/salmon.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2>... everything and anything Alison Roman.</h2>
+    <section class="featured-cooking-video">
+      <div class="video-frame">
+        <video autoplay muted loop playsinline>
+          <source src="videos/thanksgiving.mov" type="video/mp4">
+        </video>
+      </div>
+    </section>
+  </section>
+
+
   </main>
+  <script id="sl9t5y">
+    function toggleLearn() {
+      const section = document.getElementById("learn-section");
+
+      if (section.classList.contains("learn-visible")) {
+        section.classList.remove("learn-visible");
+      } else {
+        section.classList.add("learn-visible");
+      }
+    }
+  </script>
 </body>
 </html>
