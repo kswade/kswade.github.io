@@ -786,7 +786,7 @@ text-decoration: none
   display:flex;
   gap:24px;
   width:max-content;
-  animation:scrollBooks 8s linear infinite;
+  animation:scrollBooks 40s linear infinite;
 }
 
 .book-track img{
