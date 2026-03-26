@@ -2,28 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katie Swade | Home</title>
+  <meta
+    name="description"
+    content="Katie Swade is a technology consultant focused on data engineering, systems integration, cloud solutions, and thoughtful problem solving."
+  >
   <link rel="stylesheet" href="styles.css">
-  <title>Home</title>
   <link rel="icon" type="image/png" href="images/chicago_favicon.png">
 </head>
-<body>
+<body class="home-page">
   <header>
-    <nav>
+    <nav aria-label="Primary">
       <a href="index.html">Home</a> |
       <a href="about.html">About Me</a> |
       <a href="resume.html">Career Journey</a> |
       <a href="portfolio.html">Portfolio</a> |
-      <a href="socials.html">Where To Find Me</a> 
+      <a href="socials.html">Where To Find Me</a>
     </nav>
   </header>
-  <main class="container">
-    <div class="home-section">
-      <img src="images/Swade_headshot_2025_cropped.jpeg" alt="Katie Swade" class="profile-pic">
-      <div class="about-text">
-        <h1 style="font-family:consolas, monospace">Hello World!</h1>
-        <p>I’m a technology consultant specializing in data engineering, systems integration, and cloud solutions. I help organizations modernize legacy platforms, automate complex workflows, and design scalable data pipelines that drive long-term impact. With a background that spans both technical delivery and client engagement, I bridge the gap between business needs and technical solutions. I’m especially passionate about creating tools and processes that enable organizations to unlock the full value of their data.</p>
+
+  <main>
+    <section class="hero-shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Chicago-based consultant • Data, systems, cloud</p>
+          <h1>Helping teams turn messy, high-stakes technical challenges into elegant, usable systems.</h1>
+          <p class="hero-intro">
+            <span class="hello-world-inline">Hello World!</span> I'm Katie Swade. I work at the intersection of data engineering, automation,
+            systems integration, and client partnership. If this is your first time here,
+            you've landed in the right place to get a feel for how I think, what I build,
+            and what I care about.
+          </p>
+          <div class="hero-actions">
+            <a class="button-primary" href="about.html">Get To Know Me</a>
+            <a class="button-secondary" href="resume.html">Explore My Career Journey</a>
+          </div>
+          <div class="hero-highlights" aria-label="Highlights">
+            <div class="highlight-card">
+              <span class="highlight-label">Focus Areas</span>
+              <p>Data pipelines, integrations, automation, cloud modernization</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-label">Working Style</span>
+              <p>Analytical, collaborative, calm under pressure, client-centered</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-label">What You'll Find Here</span>
+              <p>My story, career path, projects in progress, and places to connect</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-portrait-card">
+          <div class="portrait-frame">
+            <img src="images/Swade_headshot_2025_cropped.jpeg" alt="Portrait of Katie Swade" class="profile-pic">
+          </div>
+          <div class="portrait-note">
+            <p class="portrait-kicker">First time visitor?</p>
+            <p>
+              Start with the story behind my work, then head into my career journey
+              for the bigger picture.
+            </p>
+          </div>
+        </aside>
       </div>
-    </div>
+    </section>
+
+    <section class="container welcome-section">
+      <div class="section-heading">
+        <p class="section-label">A Better First Look</p>
+        <h2>Here’s what this site is meant to help you do.</h2>
+      </div>
+
+      <div class="path-grid">
+        <a class="path-card" href="about.html">
+          <span class="path-number">01</span>
+          <h3>Learn who I am</h3>
+          <p>Get the personal context behind the work: what motivates me, what I enjoy building, and what matters most to me.</p>
+        </a>
+        <a class="path-card" href="resume.html">
+          <span class="path-number">02</span>
+          <h3>See how I’ve grown</h3>
+          <p>Walk through the companies, roles, and experiences that shaped my approach to consulting and technical delivery.</p>
+        </a>
+        <a class="path-card" href="socials.html">
+          <span class="path-number">03</span>
+          <h3>Keep in touch</h3>
+          <p>Find my writing, professional profiles, and the easiest ways to reach out for conversation or collaboration.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="container values-section">
+      <div class="values-panel">
+        <div class="section-heading">
+          <p class="section-label">How I Work</p>
+          <h2>Technical depth matters. So does the human side.</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Translate complexity</h3>
+            <p>I like untangling complicated systems and turning them into solutions people can actually understand and use.</p>
+          </div>
+          <div class="value-card">
+            <h3>Build with intention</h3>
+            <p>Good systems are scalable and practical, but they also respect the realities of teams, stakeholders, and long-term maintenance.</p>
+          </div>
+          <div class="value-card">
+            <h3>Partner closely</h3>
+            <p>The best outcomes usually come from strong collaboration across business and technical teams, not from working in isolation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
