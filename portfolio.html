@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/chicago_favicon.png">
 </head>
-<body>
+<body class="portfolio-page">
   <header>
-    <nav>
+    <nav aria-label="Primary">
       <a href="index.html">Home</a> |
       <a href="about.html">About Me</a> |
       <a href="resume.html">Career Journey</a> |
@@ -17,11 +18,38 @@
     </nav>
   </header>
 
-  <main class="container">
-    
-    <h1>Project Portfolio Coming Soon</h1>
-      <p>You'll soon be able to find all of my project work here.</p>
-      <img src="images/construction.png">
+  <main>
+    <section class="portfolio-hero">
+      <div class="container portfolio-grid">
+        <div class="portfolio-copy">
+          <p class="section-label">Coming Soon</p>
+          <div class="portfolio-heading">
+            <h1>A fuller project portfolio is on the way.</h1>
+            <img
+              src="images/construction.png"
+              alt="Construction illustration"
+              class="portfolio-heading-art"
+            >
+          </div>
+          <p class="portfolio-intro">
+            This page is being built out to showcase selected work, technical projects, and the stories behind how each one came together.
+          </p>
+          <p class="portfolio-note">
+            For now, you can still get a sense of how I work through my career journey, background, and the places I share ideas online.
+          </p>
+          <div class="hero-actions portfolio-actions">
+            <a class="button-primary" href="resume.html">View My Career Journey</a>
+            <a class="button-secondary" href="socials.html">Find Me Online</a>
+          </div>
+          <p class="portfolio-card-kicker">What to expect here</p>
+          <ul class="portfolio-list">
+            <li>Highlighted consulting and technical projects</li>
+            <li>Context on the problems, tools, and outcomes</li>
+            <li>A few personal builds and experiments along the way</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>

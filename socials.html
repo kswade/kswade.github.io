@@ -19,8 +19,13 @@
 
   <main class="container">
     <section class="find-me">
+      <div class="section-heading">
+        <p class="section-label">Follow Me</p>
+        <h2>Here's Where to Find Me</h2>
+        <!-- <p>If we've worked together, crossed paths, or it's simply been a while, I'd love to hear from you. Email me directly or use the form below, whichever is easier.</p> -->
+      </div>
 
-    <h2>Here's Where to Find Me</h2>
+    <!-- <h2>Here's Where to Find Me</h2> -->
 
     <div class="platform-grid">
 
@@ -60,19 +65,38 @@
     </div>
   </section>
 
-  <section class="contact-section">
-    <h2>Let's Connect</h2>
-    <!-- Email -->
-    <a href="mailto:katherine.swade@kenwayconsulting.com" target="_blank" class="contact-card">
-      <img src="images/email.png" class="platform-logo">
-      <div class="contact-text">
-      <h3>Email</h3>
-      <p>
-        Feel free to reach out if you'd like to connect, collaborate, or just say hello.
-      </p>
-      </div>
-      <div class="platform-btn">Email me →</div>
-    </a>
+  <section class="container contact-options-section">
+    <div class="section-heading">
+      <p class="section-label">Get In Touch</p>
+      <h2>Let's Connect</h2>
+      <p>If we've worked together, crossed paths, or it's simply been a while, I'd love to hear from you. Email me directly or use the form below, whichever is easier.</p>
+    </div>
+
+    <div class="contact-options-grid">
+      <a href="mailto:katherine.swade@kenwayconsulting.com" target="_blank" class="contact-card">
+        <img src="images/email.png" class="platform-logo" alt="">
+        <div class="contact-text">
+          <h3>Email Directly</h3>
+          <p>Reach out if you'd like to connect, collaborate, or just say hello.</p>
+        </div>
+        <div class="platform-btn">Email me →</div>
+      </a>
+
+      <a href="#contact-form" class="contact-card contact-card-form">
+        <img src="images/form.png" class="platform-logo" alt="">
+        <div class="contact-text">
+          <h3>Use the Form Below</h3>
+          <p>Prefer a quick note? Fill out the form below and I'll get back to you.</p>
+        </div>
+        <div class="platform-btn"></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact-form" class="container form-frame-section">
+    <div class="form-embed">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6wdYrvElMP0uqerya2jm1ktlsKScAkp2A3EWwmVqJKLq7tQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">Loading…</iframe>
+    </div>
   </section>
   
 </main>
