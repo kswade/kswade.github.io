@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Snippets</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/chicago_favicon.png">
+</head>
+<body class="portfolio-page">
+  <header>
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Me</a> |
+      <a href="resume.html">Career Journey</a> |
+      <a href="portfolio.html">Portfolio</a> |
+      <a href="socials.html">Where To Find Me</a> 
+    </nav>
+  </header>
+
+  <main>
+    <textarea id="input" placeholder="Enter numbers, one per line"></textarea>
+  
+    <button onclick="convert()">Convert</button>
+    
+    <textarea id="output" placeholder="Result will appear here"></textarea>
+    
+    <script>
+    function convert() {
+      const input = document.getElementById("input").value;
+    
+      const output = input
+        .trim()
+        .split(/\r?\n/)   // handles different OS line breaks
+        .join(", ");
+    
+      document.getElementById("output").value = output;
+    }
+    </script>
+  </main>
+</body>
+</html>
