@@ -14,40 +14,155 @@
       <a href="about.html">About Me</a> |
       <a href="resume.html">Career Journey</a> |
       <a href="portfolio.html">Portfolio</a> |
+      <a href="code.html">Coding Toolkit</a> |
       <a href="socials.html">Where To Find Me</a> 
     </nav>
   </header>
 
   <main>
-    <section class="portfolio-hero">
-      <div class="container portfolio-grid">
-        <div class="portfolio-copy">
-          <p class="section-label">Coming Soon</p>
-          <div class="portfolio-heading">
-            <h1>A fuller project portfolio is on the way.</h1>
-            <img
-              src="images/construction.png"
-              alt="Construction illustration"
-              class="portfolio-heading-art"
-            >
-          </div>
-          <p class="portfolio-intro">
-            This page is being built out to showcase selected work, technical projects, and the stories behind how each one came together.
+    <section class="container portfolio-intro-panel">
+      <p class="section-label">Portfolio</p>
+      <h1>Selected stories from technical work, consulting, and product education.</h1>
+      <p>
+        A few examples of the kinds of problems I like working on: translating technical ideas,
+        building scalable data systems, and adapting solutions to the realities of different industries.
+      </p>
+    </section>
+
+    <section class="container portfolio-stories" id="portfolio">
+      <div class="section-heading">
+        <h2>A few project stories</h2>
+      </div>
+
+      <div class="project-story-grid">
+        <article class="project-story-card">
+          <p class="portfolio-card-kicker">Product Education</p>
+          <h3>API Education Video Series</h3>
+          <p class="project-story-impact">
+            Created technical tutorials to help Parabola users integrate external APIs into automated workflows.
           </p>
-          <p class="portfolio-note">
-            For now, you can still get a sense of how I work through my career journey, background, and the places I share ideas online.
-          </p>
-          <div class="hero-actions portfolio-actions">
-            <a class="button-primary" href="resume.html">View My Career Journey</a>
-            <a class="button-secondary" href="socials.html">Find Me Online</a>
+          <div class="project-story-tags">
+            <span>APIs</span>
+            <span>Technical education</span>
+            <span>Product adoption</span>
           </div>
-          <p class="portfolio-card-kicker">What to expect here</p>
-          <ul class="portfolio-list">
-            <li>Highlighted consulting and technical projects</li>
-            <li>Context on the problems, tools, and outcomes</li>
-            <li>A few personal builds and experiments along the way</li>
-          </ul>
-        </div>
+          <details class="project-story-details">
+            <summary>Read the story</summary>
+            <div class="project-story-expanded">
+              <p>
+                While at Parabola, I developed educational videos that made API concepts approachable for non-technical users.
+                The goal was to help users move from "I know this data exists somewhere" to confidently connecting external
+                data sources into automated workflows.
+              </p>
+              <a
+                class="project-media-link"
+                href="https://parabola.io/docs/product/overview/using-apis-in-parabola"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch the Parabola API guide series"
+              >
+                <span class="project-media-play" aria-hidden="true"></span>
+                <span>
+                  <strong>Watch the API guide series</strong>
+                  <small>Parabola video guide</small>
+                </span>
+              </a>
+              <h4>What I did</h4>
+              <ul>
+                <li>Scripted and recorded step-by-step API tutorials</li>
+                <li>Translated technical concepts into clear, approachable walkthroughs</li>
+                <li>Focused on real-world use cases to support product adoption</li>
+              </ul>
+              <h4>Impact</h4>
+              <ul>
+                <li>Reduced friction for users learning API-based workflows</li>
+                <li>Helped users integrate external data sources more confidently</li>
+                <li>Supported broader adoption of advanced product functionality</li>
+              </ul>
+              <p class="note">
+                Content created as part of my role at Parabola. External link may change over time.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <article class="project-story-card">
+          <p class="portfolio-card-kicker">Data Engineering</p>
+          <h3>Scaling Data Products with Metadata-Driven Pipelines</h3>
+          <p class="project-story-impact">
+            Enabled scalable, higher-quality data product delivery across highly variable source datasets.
+          </p>
+          <div class="project-story-tags">
+            <span>Databricks</span>
+            <span>Spark</span>
+            <span>Data quality</span>
+          </div>
+          <details class="project-story-details">
+            <summary>Read the story</summary>
+            <div class="project-story-expanded">
+              <p>
+                As part of my work at
+                <a href="https://www.kenwayconsulting.com" target="_blank" rel="noopener noreferrer">Kenway Consulting</a>,
+                I partnered with a client launching new data products from complex and inconsistent datasets. The existing
+                approach required significant custom engineering for each new source, which limited scale.
+              </p>
+              <h4>The challenge</h4>
+              <p>
+                Source data varied widely in structure, metadata, and format. Without a reusable approach, each new data product
+                added complexity and slowed delivery timelines.
+              </p>
+              <h4>What I did</h4>
+              <ul>
+                <li>Designed a metadata-driven pipeline architecture in Databricks</li>
+                <li>Established configuration-based processing for onboarding new sources</li>
+                <li>Standardized transformations across a medallion-style architecture</li>
+                <li>Embedded validation, profiling, and anomaly detection into pipelines</li>
+              </ul>
+              <h4>Outcome</h4>
+              <ul>
+                <li>Shifted source onboarding from custom builds to configuration-driven updates</li>
+                <li>Improved trust in downstream data products through integrated quality checks</li>
+                <li>Supported scalable delivery without increasing engineering overhead</li>
+              </ul>
+              <p class="note">
+                Project delivered as part of my work at Kenway Consulting. Details have been generalized to protect client confidentiality.
+              </p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="container portfolio-industries" id="industries">
+      <div class="section-heading">
+        <p class="section-label">Industry Context</p>
+        <h2>Experience across domains</h2>
+        <p>
+          I’ve worked across industries with different constraints, but the throughline is consistent:
+          build systems that are scalable, understandable, and trustworthy.
+        </p>
+      </div>
+
+      <div class="industry-grid">
+        <article class="industry-card">
+          <h3>Insurance &amp; Risk Management</h3>
+          <p>High-volume datasets and processes where accuracy, traceability, and data quality are critical.</p>
+        </article>
+
+        <article class="industry-card">
+          <h3>Supply Chain</h3>
+          <p>Operational workflows involving system integration, efficiency, and visibility across distributed processes.</p>
+        </article>
+
+        <article class="industry-card">
+          <h3>Accounting &amp; Finance</h3>
+          <p>Structured reporting solutions where consistency, auditability, and system alignment matter.</p>
+        </article>
+
+        <article class="industry-card">
+          <h3>Healthcare</h3>
+          <p>Sensitive data environments that require scalable architectures and thoughtful governance.</p>
+        </article>
       </div>
     </section>
   </main>

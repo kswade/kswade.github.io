@@ -7,34 +7,536 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/chicago_favicon.png">
 </head>
-<body class="portfolio-page">
+<body class="code-page">
   <header>
     <nav aria-label="Primary">
       <a href="index.html">Home</a> |
       <a href="about.html">About Me</a> |
       <a href="resume.html">Career Journey</a> |
       <a href="portfolio.html">Portfolio</a> |
+      <a href="code.html">Coding Toolkit</a> |
       <a href="socials.html">Where To Find Me</a> 
     </nav>
   </header>
 
   <main>
-    <textarea id="input" placeholder="Enter numbers, one per line"></textarea>
-  
-    <button onclick="convert()">Convert</button>
-    
-    <textarea id="output" placeholder="Result will appear here"></textarea>
-    
+    <section class="container portfolio-intro-panel">
+      <p class="section-label">Coding Toolkit</p>
+      <h1>Small tools for cleaning up everyday coding chores.</h1>
+      <p>
+        I kept finding myself bouncing between different tools for simple formatting tasks.
+        AI assistants handle most of these tasks now, but I still use this as a reliable place for the quick converters
+        and helpers I reach for more often than expected.
+      </p>
+    </section>
+
+    <section class="container snippets-list">
+      <article class="snippet-tool">
+        <div class="snippet-tool-header">
+          <p class="section-label">Formatter</p>
+          <h2>List converter</h2>
+          <p>
+            Turn line-separated values into a comma-separated list, or send a comma-separated list back into one value per line.
+          </p>
+        </div>
+
+        <div class="snippet-tool-card" aria-label="Line and comma separated list converter">
+          <div class="field-group">
+            <label for="input">Input</label>
+            <textarea id="input" placeholder="Enter values, one per line or separated by commas"></textarea>
+          </div>
+
+          <div class="snippet-tool-actions" aria-label="Conversion options">
+            <button class="button-primary snippet-action-button" type="button" onclick="convertLinesToCommas()">Lines to commas</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="convertCommasToLines()">Commas to lines</button>
+          </div>
+
+          <div class="output-heading">
+            <label for="output">Output</label>
+            <button class="copy-button" type="button" onclick="copyOutput()" aria-label="Copy output">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+              <span id="copy-status">Copy</span>
+            </button>
+          </div>
+          <textarea id="output" placeholder="Result will appear here" readonly></textarea>
+        </div>
+      </article>
+
+      <article class="snippet-tool">
+        <div class="snippet-tool-header">
+          <p class="section-label">SQL helper</p>
+          <h2>SQL list builder</h2>
+          <p>
+            Paste IDs, names, or codes and format them for a SQL lookup without opening a separate formatter site.
+          </p>
+        </div>
+
+        <div class="snippet-tool-card" aria-label="SQL list builder">
+          <div class="field-group">
+            <label for="sql-input">Input</label>
+            <textarea id="sql-input" placeholder="Enter values, one per line or separated by commas"></textarea>
+          </div>
+
+          <div class="snippet-options" aria-label="SQL formatting options">
+            <label class="snippet-option" for="sql-quote-values">
+              <input id="sql-quote-values" type="checkbox" checked>
+              Quote values
+            </label>
+            <label class="snippet-option" for="sql-wrap-in">
+              <input id="sql-wrap-in" type="checkbox" checked>
+              Wrap in IN (...)
+            </label>
+            <label class="snippet-option" for="sql-remove-duplicates">
+              <input id="sql-remove-duplicates" type="checkbox" checked>
+              Remove duplicates
+            </label>
+            <label class="snippet-select-label" for="sql-sort-order">
+              Sort
+              <select id="sql-sort-order">
+                <option value="none">Keep order</option>
+                <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="snippet-tool-actions">
+            <button class="button-primary snippet-action-button" type="button" onclick="buildSqlList()">Build SQL list</button>
+          </div>
+
+          <div class="output-heading">
+            <label for="sql-output">Output</label>
+            <button class="copy-button" type="button" onclick="copyTextFrom('sql-output', 'sql-copy-status')" aria-label="Copy SQL output">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+              <span id="sql-copy-status">Copy</span>
+            </button>
+          </div>
+          <textarea id="sql-output" placeholder="Result will appear here" readonly></textarea>
+        </div>
+      </article>
+
+      <article class="snippet-tool">
+        <div class="snippet-tool-header">
+          <p class="section-label">JSON helper</p>
+          <h2>JSON builder and formatter</h2>
+          <p>
+            Turn a pasted list into a JSON array, or pretty-print and minify JSON payloads without leaving the page.
+          </p>
+        </div>
+
+        <div class="snippet-tool-card" aria-label="JSON builder and formatter">
+          <div class="field-group">
+            <label for="json-input">Input</label>
+            <textarea id="json-input" placeholder="Enter list values, or paste JSON to format"></textarea>
+          </div>
+
+          <div class="snippet-options" aria-label="JSON formatting options">
+            <label class="snippet-option" for="json-string-values">
+              <input id="json-string-values" type="checkbox" checked>
+              String values
+            </label>
+            <label class="snippet-option" for="json-remove-duplicates">
+              <input id="json-remove-duplicates" type="checkbox" checked>
+              Remove duplicates
+            </label>
+            <label class="snippet-option" for="json-multiline">
+              <input id="json-multiline" type="checkbox" checked>
+              Pretty array
+            </label>
+            <label class="snippet-select-label" for="json-sort-order">
+              Sort
+              <select id="json-sort-order">
+                <option value="none">Keep order</option>
+                <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="snippet-tool-actions">
+            <button class="button-primary snippet-action-button" type="button" onclick="buildJsonArray()">Build JSON array</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="formatJson()">Pretty JSON</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="minifyJson()">Minify JSON</button>
+          </div>
+
+          <div class="output-heading">
+            <label for="json-output">Output</label>
+            <button class="copy-button" type="button" onclick="copyTextFrom('json-output', 'json-copy-status')" aria-label="Copy JSON output">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+              <span id="json-copy-status">Copy</span>
+            </button>
+          </div>
+          <textarea id="json-output" placeholder="Result will appear here" readonly></textarea>
+        </div>
+      </article>
+
+      <article class="snippet-tool">
+        <div class="snippet-tool-header">
+          <p class="section-label">Encoder</p>
+          <h2>Base64 encoder and decoder</h2>
+          <p>
+            Encode plain text into Base64 or decode Base64 back into readable text.
+          </p>
+        </div>
+
+        <div class="snippet-tool-card" aria-label="Base64 encoder and decoder">
+          <div class="field-group">
+            <label for="base64-input">Input</label>
+            <textarea id="base64-input" placeholder="Enter text or Base64"></textarea>
+          </div>
+
+          <div class="snippet-tool-actions">
+            <button class="button-primary snippet-action-button" type="button" onclick="encodeBase64()">Encode Base64</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="decodeBase64()">Decode Base64</button>
+          </div>
+
+          <div class="output-heading">
+            <label for="base64-output">Output</label>
+            <button class="copy-button" type="button" onclick="copyTextFrom('base64-output', 'base64-copy-status')" aria-label="Copy Base64 output">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+              <span id="base64-copy-status">Copy</span>
+            </button>
+          </div>
+          <textarea id="base64-output" placeholder="Result will appear here" readonly></textarea>
+        </div>
+      </article>
+
+      <article class="snippet-tool">
+        <div class="snippet-tool-header">
+          <p class="section-label">API helper</p>
+          <h2>API request builder</h2>
+          <p>
+            Build a URL with query parameters, clean up request headers, or generate a quick cURL command.
+          </p>
+        </div>
+
+        <div class="snippet-tool-card" aria-label="API request builder">
+          <div class="field-group">
+            <label for="api-url">Base URL</label>
+            <input id="api-url" class="snippet-text-input" type="text" placeholder="https://api.example.com/users">
+          </div>
+
+          <div class="snippet-two-column">
+            <div class="field-group">
+              <label for="api-query-input">Query params</label>
+              <textarea id="api-query-input" placeholder="status=active&#10;limit=100"></textarea>
+            </div>
+
+            <div class="field-group">
+              <label for="api-headers-input">Headers</label>
+              <textarea id="api-headers-input" placeholder="Authorization: Bearer token&#10;Content-Type: application/json"></textarea>
+            </div>
+          </div>
+
+          <div class="snippet-options" aria-label="API builder options">
+            <label class="snippet-option" for="api-encode-values">
+              <input id="api-encode-values" type="checkbox" checked>
+              Encode query values
+            </label>
+            <label class="snippet-select-label" for="api-header-format">
+              Headers
+              <select id="api-header-format">
+                <option value="json">JSON</option>
+                <option value="curl">cURL -H</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="snippet-tool-actions">
+            <button class="button-primary snippet-action-button" type="button" onclick="buildApiUrl()">Build URL</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="formatApiHeaders()">Format headers</button>
+            <button class="button-secondary snippet-action-button" type="button" onclick="buildCurlCommand()">Build cURL</button>
+          </div>
+
+          <div class="output-heading">
+            <label for="api-output">Output</label>
+            <button class="copy-button" type="button" onclick="copyTextFrom('api-output', 'api-copy-status')" aria-label="Copy API output">
+              <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                <path d="M8 8h10v12H8z"></path>
+                <path d="M6 16H4V4h12v2"></path>
+              </svg>
+              <span id="api-copy-status">Copy</span>
+            </button>
+          </div>
+          <textarea id="api-output" placeholder="Result will appear here" readonly></textarea>
+        </div>
+      </article>
+    </section>
+
     <script>
-    function convert() {
+    function convertLinesToCommas() {
       const input = document.getElementById("input").value;
-    
+
       const output = input
         .trim()
-        .split(/\r?\n/)   // handles different OS line breaks
+        .split(/\r?\n/)
+        .map(value => value.trim())
+        .filter(Boolean)
         .join(", ");
-    
+
       document.getElementById("output").value = output;
+    }
+
+    function convertCommasToLines() {
+      const input = document.getElementById("input").value;
+
+      const output = input
+        .trim()
+        .split(",")
+        .map(value => value.trim())
+        .filter(Boolean)
+        .join("\n");
+
+      document.getElementById("output").value = output;
+    }
+
+    function buildSqlList() {
+      const input = document.getElementById("sql-input").value;
+      const shouldQuote = document.getElementById("sql-quote-values").checked;
+      const shouldWrap = document.getElementById("sql-wrap-in").checked;
+      const shouldDedupe = document.getElementById("sql-remove-duplicates").checked;
+      const sortOrder = document.getElementById("sql-sort-order").value;
+
+      let values = parseListValues(input);
+
+      if (shouldDedupe) {
+        values = [...new Set(values)];
+      }
+
+      if (sortOrder !== "none") {
+        values = values.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+        if (sortOrder === "desc") {
+          values.reverse();
+        }
+      }
+
+      const formattedValues = values.map(value => shouldQuote ? `'${escapeSqlValue(value)}'` : value);
+      const output = shouldWrap ? `IN (${formattedValues.join(", ")})` : formattedValues.join(", ");
+
+      document.getElementById("sql-output").value = output;
+    }
+
+    function parseListValues(input) {
+      return input
+        .trim()
+        .split(/[\n,]+/)
+        .map(value => value.trim().replace(/^['"]|['"]$/g, ""))
+        .filter(Boolean);
+    }
+
+    function escapeSqlValue(value) {
+      return value.replace(/'/g, "''");
+    }
+
+    function buildJsonArray() {
+      const input = document.getElementById("json-input").value;
+      const shouldStringify = document.getElementById("json-string-values").checked;
+      const shouldDedupe = document.getElementById("json-remove-duplicates").checked;
+      const shouldMultiline = document.getElementById("json-multiline").checked;
+      const sortOrder = document.getElementById("json-sort-order").value;
+
+      let values = parseListValues(input);
+
+      if (shouldDedupe) {
+        values = [...new Set(values)];
+      }
+
+      if (sortOrder !== "none") {
+        values = values.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+        if (sortOrder === "desc") {
+          values.reverse();
+        }
+      }
+
+      const outputValues = shouldStringify ? values : values.map(parseJsonPrimitive);
+      const spacing = shouldMultiline ? 2 : 0;
+
+      document.getElementById("json-output").value = JSON.stringify(outputValues, null, spacing);
+    }
+
+    function formatJson() {
+      transformJson(2);
+    }
+
+    function minifyJson() {
+      transformJson(0);
+    }
+
+    function transformJson(spacing) {
+      const input = document.getElementById("json-input").value;
+      const output = document.getElementById("json-output");
+
+      try {
+        output.value = JSON.stringify(JSON.parse(input), null, spacing);
+      } catch (error) {
+        output.value = `Invalid JSON: ${error.message}`;
+      }
+    }
+
+    function parseJsonPrimitive(value) {
+      if (value === "true") {
+        return true;
+      }
+
+      if (value === "false") {
+        return false;
+      }
+
+      if (value === "null") {
+        return null;
+      }
+
+      const numberValue = Number(value);
+      return Number.isNaN(numberValue) ? value : numberValue;
+    }
+
+    function encodeBase64() {
+      const input = document.getElementById("base64-input").value;
+      const bytes = new TextEncoder().encode(input);
+      const binary = Array.from(bytes, byte => String.fromCharCode(byte)).join("");
+
+      document.getElementById("base64-output").value = btoa(binary);
+    }
+
+    function decodeBase64() {
+      const input = document.getElementById("base64-input").value.trim();
+      const output = document.getElementById("base64-output");
+
+      try {
+        const binary = atob(input);
+        const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+        output.value = new TextDecoder().decode(bytes);
+      } catch (error) {
+        output.value = "Invalid Base64 input.";
+      }
+    }
+
+    function buildApiUrl() {
+      const baseUrl = document.getElementById("api-url").value.trim();
+      const shouldEncode = document.getElementById("api-encode-values").checked;
+      const params = parseKeyValueLines(document.getElementById("api-query-input").value);
+
+      document.getElementById("api-output").value = appendQueryParams(baseUrl, params, shouldEncode);
+    }
+
+    function formatApiHeaders() {
+      const headers = parseKeyValueLines(document.getElementById("api-headers-input").value);
+      const format = document.getElementById("api-header-format").value;
+      const output = format === "curl"
+        ? headers.map(header => `-H "${header.key}: ${header.value}"`).join(" \\\n")
+        : JSON.stringify(Object.fromEntries(headers.map(header => [header.key, header.value])), null, 2);
+
+      document.getElementById("api-output").value = output;
+    }
+
+    function buildCurlCommand() {
+      const baseUrl = document.getElementById("api-url").value.trim();
+      const params = parseKeyValueLines(document.getElementById("api-query-input").value);
+      const headers = parseKeyValueLines(document.getElementById("api-headers-input").value);
+      const url = appendQueryParams(baseUrl, params, true);
+      const headerLines = headers.map(header => `  -H "${header.key}: ${header.value}"`);
+      const commandParts = [`curl "${url}"`, ...headerLines];
+
+      document.getElementById("api-output").value = commandParts.join(" \\\n");
+    }
+
+    function parseKeyValueLines(input) {
+      return input
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(Boolean)
+        .map(line => {
+          const separatorIndex = findKeyValueSeparator(line);
+
+          if (separatorIndex === -1) {
+            return { key: line, value: "" };
+          }
+
+          return {
+            key: line.slice(0, separatorIndex).trim(),
+            value: line.slice(separatorIndex + 1).trim()
+          };
+        })
+        .filter(item => item.key);
+    }
+
+    function findKeyValueSeparator(line) {
+      const equalsIndex = line.indexOf("=");
+      const colonIndex = line.indexOf(":");
+
+      if (equalsIndex === -1) {
+        return colonIndex;
+      }
+
+      if (colonIndex === -1) {
+        return equalsIndex;
+      }
+
+      return Math.min(equalsIndex, colonIndex);
+    }
+
+    function appendQueryParams(baseUrl, params, shouldEncode) {
+      if (!baseUrl || params.length === 0) {
+        return baseUrl;
+      }
+
+      const query = params
+        .map(param => {
+          const key = shouldEncode ? encodeURIComponent(param.key) : param.key;
+          const value = shouldEncode ? encodeURIComponent(param.value) : param.value;
+
+          return `${key}=${value}`;
+        })
+        .join("&");
+
+      const separator = baseUrl.includes("?") ? "&" : "?";
+      return `${baseUrl}${separator}${query}`;
+    }
+
+    function copyOutput() {
+      copyTextFrom("output", "copy-status");
+    }
+
+    async function copyTextFrom(outputId, statusId) {
+      const output = document.getElementById(outputId);
+      const status = document.getElementById(statusId);
+      const text = output.value;
+
+      if (!text) {
+        status.textContent = "Empty";
+        setTimeout(() => status.textContent = "Copy", 1400);
+        return;
+      }
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          output.select();
+          document.execCommand("copy");
+          output.setSelectionRange(0, 0);
+        }
+
+        status.textContent = "Copied";
+      } catch (error) {
+        status.textContent = "Try again";
+      }
+
+      setTimeout(() => status.textContent = "Copy", 1600);
     }
     </script>
   </main>
